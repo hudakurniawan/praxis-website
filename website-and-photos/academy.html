@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Explore Praxis High School's innovative STEAM programs including AI, Robotics, Science, Business, and Arts. Discover our comprehensive curriculum and hands-on learning approach.">
+    <meta name="keywords" content="Praxis High School academy, STEAM programs, AI education, robotics, science projects, business education, arts curriculum">
+    <meta name="author" content="Praxis High School">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Academy - Praxis High School">
+    <meta property="og:description" content="Explore our innovative STEAM programs including AI, Robotics, Science, Business, and Arts.">
+    <meta property="og:image" content="https://hudakurniawan.github.io/website-and-photos/praxcis-removebg-preview.png">
+    <meta property="og:url" content="https://hudakurniawan.github.io/academy.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Academy - Praxis High School">
+    <meta name="twitter:description" content="Explore our innovative STEAM programs including AI, Robotics, Science, Business, and Arts.">
+    <meta name="twitter:image" content="https://hudakurniawan.github.io/website-and-photos/praxcis-removebg-preview.png">
+    
+    <title>Academy - Praxis High School</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page-specific styles for academy.html */
+        .academy-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: var(--white);
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .academy-hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .academy-hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+
+        .programs-section {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .program-card {
+            background: var(--white);
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .program-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .program-content {
+            padding: 2rem;
+        }
+
+        .program-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .program-title {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .program-description {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .program-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .program-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .program-features li:last-child {
+            border-bottom: none;
+        }
+
+        .program-features i {
+            color: var(--accent-color);
+            margin-right: 0.5rem;
+        }
+
+        .curriculum-section {
+            padding: 5rem 0;
+            background-color: #f8f9fa;
+        }
+
+        .curriculum-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .curriculum-icon {
+            font-size: 4rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        .facilities-section {
+            padding: 5rem 0;
+            background-color: var(--white);
+        }
+
+        .facility-card {
+            text-align: center;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .facility-icon {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Responsive adjustments for academy.html */
+        @media (max-width: 768px) {
+            .academy-hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .program-content {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-container">
+                <img src="praxcis-removebg-preview.png" alt="Praxis Logo Left" class="header-logo logo-left" loading="lazy" width="40" height="40">
+                <div class="school-title">
+                    <h1>Praxis High School</h1>
+                    <p class="subtitle">Yogyakarta's Premier STEAM Education</p>
+                </div>
+                <img src="logopraxis.png" alt="Praxis Logo Right" class="header-logo logo-right" loading="lazy" width="40" height="40">
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav class="main-nav" id="mainNav">
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="academy.html" class="active">Academy</a></li>
+                    <li><a href="Experiences.html">Experiences</a></li>
+                    <li><a href="mentors.html">Mentors</a></li>
+                    <li><a href="visit.html">Visit</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/smapraxis" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Academy Hero Section -->
+        <section class="academy-hero">
+            <div class="container">
+                <h1>Our Academy Programs</h1>
+                <p>Discover our innovative STEAM programs designed for the future</p>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section class="programs-section">
+            <div class="container">
+                <h2 class="text-center mb-5">STEAM Programs</h2>
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="program-card">
+                            <img src="ai 1.webp" alt="AI Program" class="program-image" loading="lazy" width="400" height="250">
+                            <div class="program-content">
+                                <div class="program-icon">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <h3 class="program-title">Artificial Intelligence</h3>
+                                <p class="program-description">Explore the world of AI through hands-on projects, machine learning algorithms, and real-world applications.</p>
+                                <ul class="program-features">
+                                    <li><i class="fas fa-check"></i>Machine Learning Fundamentals</li>
+                                    <li><i class="fas fa-check"></i>Neural Networks & Deep Learning</li>
+                                    <li><i class="fas fa-check"></i>AI Ethics & Responsible Development</li>
+                                    <li><i class="fas fa-check"></i>Practical AI Applications</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="program-card">
+                            <img src="robotik.webp" alt="Robotics Program" class="program-image" loading="lazy" width="400" height="250">
+                            <div class="program-content">
+                                <div class="program-icon">
+                                    <i class="fas fa-cogs"></i>
+                                </div>
+                                <h3 class="program-title">Robotics & Engineering</h3>
+                                <p class="program-description">Build and program robots, learn mechanical engineering principles, and develop problem-solving skills.</p>
+                                <ul class="program-features">
+                                    <li><i class="fas fa-check"></i>Robot Design & Construction</li>
+                                    <li><i class="fas fa-check"></i>Programming & Control Systems</li>
+                                    <li><i class="fas fa-check"></i>Mechanical Engineering Basics</li>
+                                    <li><i class="fas fa-check"></i>Competition Robotics</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="program-card">
+                            <img src="fotosains.webp" alt="Science Program" class="program-image" loading="lazy" width="400" height="250">
+                            <div class="program-content">
+                                <div class="program-icon">
+                                    <i class="fas fa-flask"></i>
+                                </div>
+                                <h3 class="program-title">Science & Research</h3>
+                                <p class="program-description">Conduct scientific research, perform experiments, and develop critical thinking through inquiry-based learning.</p>
+                                <ul class="program-features">
+                                    <li><i class="fas fa-check"></i>Laboratory Research Methods</li>
+                                    <li><i class="fas fa-check"></i>Data Analysis & Statistics</li>
+                                    <li><i class="fas fa-check"></i>Scientific Writing & Presentation</li>
+                                    <li><i class="fas fa-check"></i>Research Project Development</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="program-card">
+                            <img src="visualbranding.jpeg" alt="Business Program" class="program-image" loading="lazy" width="400" height="250">
+                            <div class="program-content">
+                                <div class="program-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <h3 class="program-title">Business & Innovation</h3>
+                                <p class="program-description">Learn entrepreneurship, business strategy, and innovation management for future business leaders.</p>
+                                <ul class="program-features">
+                                    <li><i class="fas fa-check"></i>Business Model Development</li>
+                                    <li><i class="fas fa-check"></i>Market Research & Analysis</li>
+                                    <li><i class="fas fa-check"></i>Financial Planning & Management</li>
+                                    <li><i class="fas fa-check"></i>Innovation & Design Thinking</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Curriculum Section -->
+        <section class="curriculum-section">
+            <div class="container">
+                <h2 class="text-center mb-5">Our Curriculum</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="curriculum-card">
+                            <div class="curriculum-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>Core Subjects</h4>
+                            <p>Comprehensive coverage of traditional academic subjects with STEAM integration.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="curriculum-card">
+                            <div class="curriculum-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h4>Project-Based Learning</h4>
+                            <p>Hands-on projects that combine multiple disciplines and real-world applications.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="curriculum-card">
+                            <div class="curriculum-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>Collaborative Learning</h4>
+                            <p>Team-based projects that develop communication and leadership skills.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities Section -->
+        <section class="facilities-section">
+            <div class="container">
+                <h2 class="text-center mb-5">State-of-the-Art Facilities</h2>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-laptop"></i>
+                            </div>
+                            <h5>Computer Labs</h5>
+                            <p>Modern computer facilities with the latest software and hardware.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h5>Science Labs</h5>
+                            <p>Well-equipped laboratories for chemistry, physics, and biology experiments.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-tools"></i>
+                            </div>
+                            <h5>Workshop</h5>
+                            <p>Engineering workshop with tools and equipment for hands-on projects.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="facility-card">
+                            <div class="facility-icon">
+                                <i class="fas fa-palette"></i>
+                            </div>
+                            <h5>Art Studio</h5>
+                            <p>Creative space for digital arts, design, and multimedia projects.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="praxcis-removebg-preview.png" alt="Praxis High School Logo" class="footer-logo" loading="lazy" width="60" height="60">
+                    <h3>Praxis High School</h3>
+                    <p>Yogyakarta's Premier STEAM Education</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/smapraxis" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="academy.html">Academics</a></li>
+                        <li><a href="admissions.html">Admissions</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Resources</h4>
+                    <ul>
+                        <li><a href="Experiences.html">Experiences</a></li>
+                        <li><a href="mentors.html">Our Mentors</a></li>
+                        <li><a href="visit.html">Campus Tour</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Jl. Pakem-Kalasan, Kalibulus,<br>Area Sawah, Bimomartani, D.I.Y.</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>0811 - 938 - 932</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>smapraxis@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Praxis High School. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
