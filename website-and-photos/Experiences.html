@@ -1,352 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Discover student experiences and achievements at Praxis High School. See our students' projects, competitions, and learning journey in STEAM education.">
-    <meta name="keywords" content="Praxis High School experiences, student projects, achievements, competitions, STEAM learning, student success">
-    <meta name="author" content="Praxis High School">
-    <meta name="robots" content="index, follow">
-    
+    <meta
+      name="description"
+      content="Discover student experiences and achievements at Praxis High School. See our students' projects, competitions, and learning journey in STEAM education."
+    />
+    <meta
+      name="keywords"
+      content="Praxis High School experiences, student projects, achievements, competitions, STEAM learning, student success"
+    />
+    <meta name="author" content="Praxis High School" />
+    <meta name="robots" content="index, follow" />
+
     <!-- Open Graph Meta Tags for Social Media -->
-    <meta property="og:title" content="Experiences - Praxis High School">
-    <meta property="og:description" content="Discover student experiences and achievements at Praxis High School.">
-    <meta property="og:image" content="https://hudakurniawan.github.io/website-and-photos/praxcis-removebg-preview.png">
-    <meta property="og:url" content="https://hudakurniawan.github.io/Experiences.html">
-    <meta property="og:type" content="website">
-    
+    <meta property="og:title" content="Experiences - Praxis High School" />
+    <meta
+      property="og:description"
+      content="Discover student experiences and achievements at Praxis High School."
+    />
+    <meta
+      property="og:image"
+      content="https://hudakurniawan.github.io/website-and-photos/praxcis-removebg-preview.png"
+    />
+    <meta
+      property="og:url"
+      content="https://hudakurniawan.github.io/Experiences.html"
+    />
+    <meta property="og:type" content="website" />
+
     <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Experiences - Praxis High School">
-    <meta name="twitter:description" content="Discover student experiences and achievements at Praxis High School.">
-    <meta name="twitter:image" content="https://hudakurniawan.github.io/website-and-photos/praxcis-removebg-preview.png">
-    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Experiences - Praxis High School" />
+    <meta
+      name="twitter:description"
+      content="Discover student experiences and achievements at Praxis High School."
+    />
+    <meta
+      name="twitter:image"
+      content="https://hudakurniawan.github.io/website-and-photos/praxcis-removebg-preview.png"
+    />
+
     <title>Experiences - Praxis High School</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
     <style>
-        /* Page-specific styles for Experiences.html */
-        .experiences-hero {
-            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-            color: var(--white);
-            padding: 4rem 0;
-            text-align: center;
-        }
+      /* Page-specific styles for Experiences.html */
+      .experiences-hero {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--secondary-color) 100%
+        );
+        color: var(--white);
+        padding: 4rem 0;
+        text-align: center;
+      }
 
+      .experiences-hero h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        animation: fadeInUp 1s ease-out;
+      }
+
+      .experiences-hero p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease-out 0.2s both;
+      }
+
+      .experiences-section {
+        padding: 5rem 0;
+        background-color: var(--white);
+      }
+
+      .experience-card {
+        background: var(--white);
+        border-radius: 15px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        transition: transform 0.3s ease;
+      }
+
+      .experience-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .experience-image {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .experience-content {
+        padding: 2rem;
+      }
+
+      .experience-title {
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .experience-description {
+        color: var(--text-light);
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+      }
+
+      .achievement-badge {
+        display: inline-block;
+        background: var(--accent-color);
+        color: var(--primary-color);
+        padding: 0.5rem 1rem;
+        border-radius: 25px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        margin-right: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .testimonials-section {
+        padding: 5rem 0;
+        background-color: #f8f9fa;
+      }
+
+      .testimonial-card {
+        background: var(--white);
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      .testimonial-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin: 0 auto 1rem;
+      }
+
+      .testimonial-text {
+        font-style: italic;
+        color: var(--text-light);
+        line-height: 1.6;
+        margin-bottom: 1rem;
+      }
+
+      .testimonial-author {
+        color: var(--primary-color);
+        font-weight: 600;
+      }
+
+      /* Responsive adjustments for Experiences.html */
+      @media (max-width: 768px) {
         .experiences-hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            animation: fadeInUp 1s ease-out;
-        }
-
-        .experiences-hero p {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease-out 0.2s both;
-        }
-
-        .experiences-section {
-            padding: 5rem 0;
-            background-color: var(--white);
-        }
-
-        .experience-card {
-            background: var(--white);
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .experience-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .experience-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
+          font-size: 2.5rem;
         }
 
         .experience-content {
-            padding: 2rem;
+          padding: 1.5rem;
         }
-
-        .experience-title {
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-        }
-
-        .experience-description {
-            color: var(--text-light);
-            line-height: 1.6;
-            margin-bottom: 1.5rem;
-        }
-
-        .achievement-badge {
-            display: inline-block;
-            background: var(--accent-color);
-            color: var(--primary-color);
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .testimonials-section {
-            padding: 5rem 0;
-            background-color: #f8f9fa;
-        }
-
-        .testimonial-card {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-
-        .testimonial-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin: 0 auto 1rem;
-        }
-
-        .testimonial-text {
-            font-style: italic;
-            color: var(--text-light);
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .testimonial-author {
-            color: var(--primary-color);
-            font-weight: 600;
-        }
-
-        /* Responsive adjustments for Experiences.html */
-        @media (max-width: 768px) {
-            .experiences-hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .experience-content {
-                padding: 1.5rem;
-            }
-        }
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Skip to main content link for accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <!-- Header -->
     <header class="main-header">
-        <div class="header-container">
-            <div class="logo-container">
-                <img src="praxcis-removebg-preview.png" alt="Praxis Logo Left" class="header-logo logo-left" loading="lazy" width="40" height="40">
-                <div class="school-title">
-                    <h1>Praxis High School</h1>
-                    <p class="subtitle">Yogyakarta's Premier STEAM Education</p>
-                </div>
-                <img src="logopraxis.png" alt="Praxis Logo Right" class="header-logo logo-right" loading="lazy" width="40" height="40">
-            </div>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <nav class="main-nav" id="mainNav">
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="academy.html">Academy</a></li>
-                    <li><a href="Experiences.html" class="active">Experiences</a></li>
-                    <li><a href="mentors.html">Mentors</a></li>
-                    <li><a href="visit.html">Visit</a></li>
-                    <li><a href="admissions.html">Admissions</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-                <div class="social-icons">
-                    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/smapraxis" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-            </nav>
+      <div class="header-container">
+        <div class="logo-container">
+          <img
+            src="assets/praxcis-removebg-preview.png"
+            alt="Praxis Logo Left"
+            class="header-logo logo-left"
+            loading="lazy"
+            width="40"
+            height="40"
+          />
+          <div class="school-title">
+            <h1>Praxis High School</h1>
+            <p class="subtitle">Yogyakarta's Premier STEAM Education</p>
+          </div>
+          <img
+            src="assets/logopraxis.png"
+            alt="Praxis Logo Right"
+            class="header-logo logo-right"
+            loading="lazy"
+            width="40"
+            height="40"
+          />
         </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav class="main-nav" id="mainNav">
+          <ul class="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="academy.html">Academy</a></li>
+            <li><a href="Experiences.html" class="active">Experiences</a></li>
+            <li><a href="mentors.html">Mentors</a></li>
+            <li><a href="visit.html">Visit</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/smapraxis"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://twitter.com/" target="_blank" aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              aria-label="YouTube"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </nav>
+      </div>
     </header>
 
     <!-- Main Content -->
     <main id="main-content">
-        <!-- Experiences Hero Section -->
-        <section class="experiences-hero">
-            <div class="container">
-                <h1>Student Experiences</h1>
-                <p>Discover the amazing projects and achievements of our students</p>
-            </div>
-        </section>
+      <!-- Experiences Hero Section -->
+      <section class="experiences-hero">
+        <div class="container">
+          <h1>Student Experiences</h1>
+          <p>Discover the amazing projects and achievements of our students</p>
+        </div>
+      </section>
 
-        <!-- Experiences Section -->
-        <section class="experiences-section">
-            <div class="container">
-                <h2 class="text-center mb-5">Our Students' Journey</h2>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="experience-card">
-                            <img src="fotoaward.webp" alt="Robotics Competition" class="experience-image" loading="lazy" width="400" height="250">
-                            <div class="experience-content">
-                                <h3 class="experience-title">FIRST Tech Challenge Vietnam</h3>
-                                <p class="experience-description">Our robotics team participated in the prestigious FIRST Tech Challenge in Hanoi, Vietnam, showcasing our engineering skills and innovative solutions.</p>
-                                <div class="achievement-badges">
-                                    <span class="achievement-badge">International Competition</span>
-                                    <span class="achievement-badge">Robotics Excellence</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="experience-card">
-                            <img src="ai 1.webp" alt="AI Project" class="experience-image" loading="lazy" width="400" height="250">
-                            <div class="experience-content">
-                                <h3 class="experience-title">AI Attendance System</h3>
-                                <p class="experience-description">Students developed an innovative AI-powered attendance system using facial recognition technology, demonstrating practical application of machine learning.</p>
-                                <div class="achievement-badges">
-                                    <span class="achievement-badge">AI Innovation</span>
-                                    <span class="achievement-badge">Real-world Application</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="experience-card">
-                            <img src="fotosains.webp" alt="Science Research" class="experience-image" loading="lazy" width="400" height="250">
-                            <div class="experience-content">
-                                <h3 class="experience-title">Biotechnology Research</h3>
-                                <p class="experience-description">Students conducted groundbreaking research in biotechnology, exploring sustainable solutions for environmental challenges.</p>
-                                <div class="achievement-badges">
-                                    <span class="achievement-badge">Scientific Research</span>
-                                    <span class="achievement-badge">Environmental Impact</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="experience-card">
-                            <img src="visualbranding.jpeg" alt="Business Innovation" class="experience-image" loading="lazy" width="400" height="250">
-                            <div class="experience-content">
-                                <h3 class="experience-title">Startup Development</h3>
-                                <p class="experience-description">Students launched innovative business ventures, learning entrepreneurship through real-world experience and mentorship.</p>
-                                <div class="achievement-badges">
-                                    <span class="achievement-badge">Entrepreneurship</span>
-                                    <span class="achievement-badge">Business Innovation</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+      <!-- Experiences Section -->
+      <section class="experiences-section">
+        <div class="container">
+          <h2 class="text-center mb-5">Our Students' Journey</h2>
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="experience-card">
+                <img
+                  src="assets/fotoaward.webp"
+                  alt="Robotics Competition"
+                  class="experience-image"
+                  loading="lazy"
+                  width="400"
+                  height="250"
+                />
+                <div class="experience-content">
+                  <h3 class="experience-title">FIRST Tech Challenge Vietnam</h3>
+                  <p class="experience-description">
+                    Our robotics team participated in the prestigious FIRST Tech
+                    Challenge in Hanoi, Vietnam, showcasing our engineering
+                    skills and innovative solutions.
+                  </p>
+                  <div class="achievement-badges">
+                    <span class="achievement-badge"
+                      >International Competition</span
+                    >
+                    <span class="achievement-badge">Robotics Excellence</span>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+            <div class="col-lg-6">
+              <div class="experience-card">
+                <img
+                  src="assets/ai 1.webp"
+                  alt="AI Project"
+                  class="experience-image"
+                  loading="lazy"
+                  width="400"
+                  height="250"
+                />
+                <div class="experience-content">
+                  <h3 class="experience-title">AI Attendance System</h3>
+                  <p class="experience-description">
+                    Students developed an innovative AI-powered attendance
+                    system using facial recognition technology, demonstrating
+                    practical application of machine learning.
+                  </p>
+                  <div class="achievement-badges">
+                    <span class="achievement-badge">AI Innovation</span>
+                    <span class="achievement-badge"
+                      >Real-world Application</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="experience-card">
+                <img
+                  src="assets/fotosains.webp"
+                  alt="Science Research"
+                  class="experience-image"
+                  loading="lazy"
+                  width="400"
+                  height="250"
+                />
+                <div class="experience-content">
+                  <h3 class="experience-title">Biotechnology Research</h3>
+                  <p class="experience-description">
+                    Students conducted groundbreaking research in biotechnology,
+                    exploring sustainable solutions for environmental
+                    challenges.
+                  </p>
+                  <div class="achievement-badges">
+                    <span class="achievement-badge">Scientific Research</span>
+                    <span class="achievement-badge">Environmental Impact</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="experience-card">
+                <img
+                  src="assets/visualbranding.jpeg"
+                  alt="Business Innovation"
+                  class="experience-image"
+                  loading="lazy"
+                  width="400"
+                  height="250"
+                />
+                <div class="experience-content">
+                  <h3 class="experience-title">Startup Development</h3>
+                  <p class="experience-description">
+                    Students launched innovative business ventures, learning
+                    entrepreneurship through real-world experience and
+                    mentorship.
+                  </p>
+                  <div class="achievement-badges">
+                    <span class="achievement-badge">Entrepreneurship</span>
+                    <span class="achievement-badge">Business Innovation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <!-- Testimonials Section -->
-        <section class="testimonials-section">
-            <div class="container">
-                <h2 class="text-center mb-5">Student Testimonials</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="testimonial-card">
-                            <img src="kak ali.jpeg" alt="Student Avatar" class="testimonial-avatar" loading="lazy" width="80" height="80">
-                            <p class="testimonial-text">"The STEAM programs at Praxis have opened my eyes to the endless possibilities of technology and innovation. I've learned so much about AI and robotics."</p>
-                            <h5 class="testimonial-author">Ali Rahman</h5>
-                            <small>Grade 12 Student</small>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="testimonial-card">
-                            <img src="kak anggi.jpeg" alt="Student Avatar" class="testimonial-avatar" loading="lazy" width="80" height="80">
-                            <p class="testimonial-text">"The hands-on projects and real-world applications have made learning so much more engaging. I feel prepared for my future career."</p>
-                            <h5 class="testimonial-author">Anggi Putri</h5>
-                            <small>Grade 11 Student</small>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="testimonial-card">
-                            <img src="kak tommy.jpeg" alt="Student Avatar" class="testimonial-avatar" loading="lazy" width="80" height="80">
-                            <p class="testimonial-text">"The mentorship program has been incredible. Learning from industry experts has given me insights that go beyond textbooks."</p>
-                            <h5 class="testimonial-author">Tommy Wijaya</h5>
-                            <small>Grade 12 Student</small>
-                        </div>
-                    </div>
-                </div>
+      <!-- Testimonials Section -->
+      <section class="testimonials-section">
+        <div class="container">
+          <h2 class="text-center mb-5">Student Testimonials</h2>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="testimonial-card">
+                <img
+                  src="assets/kak ali.jpeg"
+                  alt="Student Avatar"
+                  class="testimonial-avatar"
+                  loading="lazy"
+                  width="80"
+                  height="80"
+                />
+                <p class="testimonial-text">
+                  "The STEAM programs at Praxis have opened my eyes to the
+                  endless possibilities of technology and innovation. I've
+                  learned so much about AI and robotics."
+                </p>
+                <h5 class="testimonial-author">Ali Rahman</h5>
+                <small>Grade 12 Student</small>
+              </div>
             </div>
-        </section>
+            <div class="col-md-4">
+              <div class="testimonial-card">
+                <img
+                  src="assets/kak anggi.jpeg"
+                  alt="Student Avatar"
+                  class="testimonial-avatar"
+                  loading="lazy"
+                  width="80"
+                  height="80"
+                />
+                <p class="testimonial-text">
+                  "The hands-on projects and real-world applications have made
+                  learning so much more engaging. I feel prepared for my future
+                  career."
+                </p>
+                <h5 class="testimonial-author">Anggi Putri</h5>
+                <small>Grade 11 Student</small>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="testimonial-card">
+                <img
+                  src="assets/kak tommy.jpeg"
+                  alt="Student Avatar"
+                  class="testimonial-avatar"
+                  loading="lazy"
+                  width="80"
+                  height="80"
+                />
+                <p class="testimonial-text">
+                  "The mentorship program has been incredible. Learning from
+                  industry experts has given me insights that go beyond
+                  textbooks."
+                </p>
+                <h5 class="testimonial-author">Tommy Wijaya</h5>
+                <small>Grade 12 Student</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="main-footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="praxcis-removebg-preview.png" alt="Praxis High School Logo" class="footer-logo" loading="lazy" width="60" height="60">
-                    <h3>Praxis High School</h3>
-                    <p>Yogyakarta's Premier STEAM Education</p>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/smapraxis" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="academy.html">Academics</a></li>
-                        <li><a href="admissions.html">Admissions</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Resources</h4>
-                    <ul>
-                        <li><a href="Experiences.html">Experiences</a></li>
-                        <li><a href="mentors.html">Our Mentors</a></li>
-                        <li><a href="visit.html">Campus Tour</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Contact Info</h4>
-                    <ul class="contact-info">
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Jl. Pakem-Kalasan, Kalibulus,<br>Area Sawah, Bimomartani, D.I.Y.</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone"></i>
-                            <span>0811 - 938 - 932</span>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <span>smapraxis@gmail.com</span>
-                        </li>
-                    </ul>
-                </div>
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <img
+              src="praxcis-removebg-preview.png"
+              alt="Praxis High School Logo"
+              class="footer-logo"
+              loading="lazy"
+              width="60"
+              height="60"
+            />
+            <h3>Praxis High School</h3>
+            <p>Yogyakarta's Premier STEAM Education</p>
+            <div class="social-icons">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a
+                href="https://www.instagram.com/smapraxis"
+                target="_blank"
+                aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a
+                href="https://twitter.com/"
+                target="_blank"
+                aria-label="Twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
+              <a
+                href="https://www.youtube.com/"
+                target="_blank"
+                aria-label="YouTube"
+                ><i class="fab fa-youtube"></i
+              ></a>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 Praxis High School. All Rights Reserved.</p>
-            </div>
+          </div>
+          <div class="footer-links">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="academy.html">Academics</a></li>
+              <li><a href="admissions.html">Admissions</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Resources</h4>
+            <ul>
+              <li><a href="Experiences.html">Experiences</a></li>
+              <li><a href="mentors.html">Our Mentors</a></li>
+              <li><a href="visit.html">Campus Tour</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Contact Info</h4>
+            <ul class="contact-info">
+              <li>
+                <i class="fas fa-map-marker-alt"></i>
+                <span
+                  >Jl. Pakem-Kalasan, Kalibulus,<br />Area Sawah, Bimomartani,
+                  D.I.Y.</span
+                >
+              </li>
+              <li>
+                <i class="fas fa-phone"></i>
+                <span>0811 - 938 - 932</span>
+              </li>
+              <li>
+                <i class="fas fa-envelope"></i>
+                <span>smapraxis@gmail.com</span>
+              </li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 Praxis High School. All Rights Reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <!-- Scripts -->
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>

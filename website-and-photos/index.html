@@ -1,439 +1,469 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Praxis High School - Yogyakarta's premier STEAM education institution. Discover our innovative programs, experienced mentors, and state-of-the-art facilities.">
-  <meta name="keywords" content="Praxis High School, STEAM education, Yogyakarta, high school, science, technology, engineering, arts, mathematics, Indonesia">
-  <meta name="author" content="Praxis High School">
-  <meta name="robots" content="index, follow">
-  
-  <!-- Open Graph Meta Tags for Social Media -->
-  <meta property="og:title" content="Praxis High School - Official Website">
-  <meta property="og:description" content="Yogyakarta's premier STEAM education institution with innovative programs and experienced mentors.">
-  <meta property="og:image" content="https://hudakurniawan.github.io/website-and-photos/praxcis-removebg-preview.png">
-  <meta property="og:url" content="https://hudakurniawan.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Praxis High School">
-  
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Praxis High School - Official Website">
-  <meta name="twitter:description" content="Yogyakarta's premier STEAM education institution with innovative programs and experienced mentors.">
-  <meta name="twitter:image" content="https://hudakurniawan.github.io/website-and-photos/praxcis-removebg-preview.png">
-  
-  <!-- Structured Data (JSON-LD) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "EducationalOrganization",
-    "name": "Praxis High School",
-    "description": "Yogyakarta's premier STEAM education institution",
-    "url": "https://hudakurniawan.github.io/",
-    "logo": "https://hudakurniawan.github.io/website-and-photos/praxcis-removebg-preview.png",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Jl. Pakem-Kalasan, Kalibulus, Area Sawah, Bimomartani",
-      "addressLocality": "Yogyakarta",
-      "addressRegion": "D.I.Y.",
-      "addressCountry": "ID"
-    },
-    "telephone": "0811-938-932",
-    "email": "smapraxis@gmail.com",
-    "sameAs": [
-      "https://www.instagram.com/smapraxis",
-      "https://www.facebook.com/",
-      "https://twitter.com/",
-      "https://www.youtube.com/"
-    ]
-  }
-  </script>
-  
-  <title>Praxis High School - Official Website</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Page-specific styles for index.html */
-    .hero-section {
-      background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-      color: var(--white);
-      padding: 4rem 0;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    .hero-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-image: url("fotoaward.webp");
-      background-size: cover;
-      background-position: center;
-      opacity: 0.1;
-      z-index: 1;
-    }
+    <!-- SEO Meta Tags -->
+    <meta
+      name="description"
+      content="Praxis High School - Yogyakarta's premier STEAM education institution. Discover our innovative programs, experienced mentors, and state-of-the-art facilities."
+    />
+    <meta
+      name="keywords"
+      content="Praxis High School, STEAM education, Yogyakarta, high school, science, technology, engineering, arts, mathematics, Indonesia"
+    />
+    <meta name="author" content="Praxis High School" />
+    <meta name="robots" content="index, follow" />
 
-    .hero-content {
-      position: relative;
-      z-index: 2;
-    }
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Praxis High School - Official Website" />
+    <meta
+      property="og:description"
+      content="Yogyakarta's premier STEAM education institution with innovative programs and experienced mentors."
+    />
+    <meta
+      property="og:image"
+      content="https://hudakurniawan.github.io/website-and-photos/praxcis-removebg-preview.png"
+    />
+    <meta property="og:url" content="https://hudakurniawan.github.io/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Praxis High School" />
 
-    .hero-title {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      animation: fadeInUp 1s ease-out;
-    }
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Praxis High School - Official Website"
+    />
+    <meta
+      name="twitter:description"
+      content="Yogyakarta's premier STEAM education institution with innovative programs and experienced mentors."
+    />
+    <meta
+      name="twitter:image"
+      content="https://hudakurniawan.github.io/website-and-photos/praxcis-removebg-preview.png"
+    />
 
-    .hero-subtitle {
-      font-size: 1.3rem;
-      margin-bottom: 2rem;
-      opacity: 0.9;
-      animation: fadeInUp 1s ease-out 0.2s both;
-    }
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "EducationalOrganization",
+        "name": "Praxis High School",
+        "description": "Yogyakarta's premier STEAM education institution",
+        "url": "https://hudakurniawan.github.io/",
+        "logo": "https://hudakurniawan.github.io/website-and-photos/praxcis-removebg-preview.png",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl. Pakem-Kalasan, Kalibulus, Area Sawah, Bimomartani",
+          "addressLocality": "Yogyakarta",
+          "addressRegion": "D.I.Y.",
+          "addressCountry": "ID"
+        },
+        "telephone": "0811-938-932",
+        "email": "smapraxis@gmail.com",
+        "sameAs": [
+          "https://www.instagram.com/smapraxis",
+          "https://www.facebook.com/",
+          "https://twitter.com/",
+          "https://www.youtube.com/"
+        ]
+      }
+    </script>
 
-    .hero-buttons {
-      animation: fadeInUp 1s ease-out 0.4s both;
-    }
+    <title>Praxis High School - Official Website</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* Page-specific styles for index.html */
+      .hero-section {
+        background: linear-gradient(
+          135deg,
+          var(--primary-color) 0%,
+          var(--secondary-color) 100%
+        );
+        color: var(--white);
+        padding: 4rem 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
 
-    .hero-btn {
-      margin: 0 0.5rem;
-      padding: 1rem 2rem;
-      font-size: 1.1rem;
-      border-radius: 50px;
-      text-decoration: none;
-      display: inline-block;
-      transition: var(--transition);
-      font-weight: 600;
-    }
+      .hero-section::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url("fotoaward.webp");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.1;
+        z-index: 1;
+      }
 
-    .hero-btn-primary {
-      background-color: var(--accent-color);
-      color: var(--primary-color);
-    }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+      }
 
-    .hero-btn-primary:hover {
-      background-color: #e6ac00;
-      transform: translateY(-3px);
-      box-shadow: 0 10px 25px rgba(255, 193, 7, 0.3);
-    }
-
-    .hero-btn-secondary {
-      background-color: transparent;
-      color: var(--white);
-      border: 2px solid var(--white);
-    }
-
-    .hero-btn-secondary:hover {
-      background-color: var(--white);
-      color: var(--primary-color);
-      transform: translateY(-3px);
-    }
-
-    /* Features Section */
-    .features-section {
-      padding: 5rem 0;
-      background-color: var(--white);
-    }
-
-    .feature-card {
-      text-align: center;
-      padding: 2rem;
-      margin-bottom: 2rem;
-      animation: fadeInUp 0.8s ease-out;
-    }
-
-    .feature-icon {
-      font-size: 3rem;
-      color: var(--accent-color);
-      margin-bottom: 1rem;
-    }
-
-    .feature-title {
-      font-size: 1.5rem;
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-    }
-
-    .feature-text {
-      color: var(--text-light);
-      line-height: 1.6;
-    }
-
-    /* Welcome Section */
-    .welcome-section {
-      position: relative;
-      height: 500px;
-      background-image: url("fotoaward.webp");
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      overflow: hidden;
-    }
-
-    .welcome-overlay {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(26, 35, 126, 0.6);
-    }
-
-    .welcome-content {
-      position: relative;
-      z-index: 1;
-      max-width: 800px;
-      padding: 0 20px;
-      animation: fadeInUp 1.5s ease-out;
-    }
-
-    .welcome-title {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    }
-
-    .welcome-subtitle {
-      font-size: 1.5rem;
-      margin-bottom: 0;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    }
-
-    .steam-section {
-      background-color: white;
-      padding: 4rem 0;
-    }
-
-    .steam-container {
-      max-width: 900px;
-      margin: 0 auto;
-      padding: 0 20px;
-    }
-
-    .steam-title {
-      color: var(--primary-color);
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-
-    .steam-description {
-      color: #333;
-      line-height: 1.8;
-      font-size: 1.1rem;
-      text-align: justify;
-    }
-
-    /* Responsive adjustments for index.html */
-    @media (max-width: 768px) {
       .hero-title {
-        font-size: 2.5rem;
+        font-size: 3.5rem;
+        margin-bottom: 1rem;
+        animation: fadeInUp 1s ease-out;
       }
-      
+
       .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.3rem;
+        margin-bottom: 2rem;
+        opacity: 0.9;
+        animation: fadeInUp 1s ease-out 0.2s both;
       }
-      
+
+      .hero-buttons {
+        animation: fadeInUp 1s ease-out 0.4s both;
+      }
+
       .hero-btn {
-        display: block;
-        margin: 0.5rem auto;
-        max-width: 250px;
+        margin: 0 0.5rem;
+        padding: 1rem 2rem;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        text-decoration: none;
+        display: inline-block;
+        transition: var(--transition);
+        font-weight: 600;
       }
-      
+
+      .hero-btn-primary {
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+      }
+
+      .hero-btn-primary:hover {
+        background-color: #e6ac00;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(255, 193, 7, 0.3);
+      }
+
+      .hero-btn-secondary {
+        background-color: transparent;
+        color: var(--white);
+        border: 2px solid var(--white);
+      }
+
+      .hero-btn-secondary:hover {
+        background-color: var(--white);
+        color: var(--primary-color);
+        transform: translateY(-3px);
+      }
+
+      /* Features Section */
+      .features-section {
+        padding: 5rem 0;
+        background-color: var(--white);
+      }
+
+      .feature-card {
+        text-align: center;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        animation: fadeInUp 0.8s ease-out;
+      }
+
+      .feature-icon {
+        font-size: 3rem;
+        color: var(--accent-color);
+        margin-bottom: 1rem;
+      }
+
+      .feature-title {
+        font-size: 1.5rem;
+        color: var(--primary-color);
+        margin-bottom: 1rem;
+      }
+
+      .feature-text {
+        color: var(--text-light);
+        line-height: 1.6;
+      }
+
+      /* Welcome Section */
+      .welcome-section {
+        position: relative;
+        height: 500px;
+        background-image: url("assets/fotoaward.webp");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        color: white;
+        overflow: hidden;
+      }
+
+      .welcome-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(26, 35, 126, 0.6);
+      }
+
+      .welcome-content {
+        position: relative;
+        z-index: 1;
+        max-width: 800px;
+        padding: 0 20px;
+        animation: fadeInUp 1.5s ease-out;
+      }
+
       .welcome-title {
-        font-size: 2rem;
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
       }
-      
+
       .welcome-subtitle {
-        font-size: 1.2rem;
+        font-size: 1.5rem;
+        margin-bottom: 0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
       }
-    }
-  </style>
-</head>
-<body>
-  <!-- Skip to main content link for accessibility -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-  <!-- Header -->
-  <header class="main-header">
-    <div class="header-container">
-      <div class="logo-container">
-        <img src="praxcis-removebg-preview.png" alt="Praxis Logo Left" class="header-logo logo-left" loading="lazy" width="40" height="40">
-        <div class="school-title">
-          <h1>Praxis High School</h1>
-          <p class="subtitle">Yogyakarta's Premier STEAM Education</p>
-        </div>
-        <img src="logopraxis.png" alt="Praxis Logo Right" class="header-logo logo-right" loading="lazy" width="40" height="40">
-      </div>
-      <button class="mobile-menu-btn" id="mobileMenuBtn">
-        <i class="fas fa-bars"></i>
-      </button>
-      <nav class="main-nav" id="mainNav">
-        <ul class="nav-menu">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="academy.html">Academy</a></li>
-          <li><a href="Experiences.html">Experiences</a></li>
-          <li><a href="mentors.html">Mentors</a></li>
-          <li><a href="visit.html">Visit</a></li>
-          <li><a href="admissions.html">Admissions</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://www.instagram.com/smapraxis" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-          <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-          <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-        </div>
-      </nav>
-    </div>
-  </header>
+      .steam-section {
+        background-color: white;
+        padding: 4rem 0;
+      }
 
-  <!-- Main Content -->
-  <main id="main-content">
-    <!-- Hero Section -->
-    <section class="hero-section">
-      <div class="hero-content">
-        <h1 class="hero-title">Welcome to Praxis High School</h1>
-        <p class="hero-subtitle">Empowering students through innovative STEAM education in Yogyakarta</p>
-        <div class="hero-buttons">
-          <a href="admissions.html" class="hero-btn hero-btn-primary">Apply Now</a>
-          <a href="about.html" class="hero-btn hero-btn-secondary">Learn More</a>
-        </div>
-      </div>
-    </section>
+      .steam-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
 
-    <!-- Features Section -->
-    <section class="features-section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-graduation-cap"></i>
-              </div>
-              <h3 class="feature-title">STEAM Education</h3>
-              <p class="feature-text">Comprehensive Science, Technology, Engineering, Arts, and Mathematics curriculum designed for the future.</p>
-            </div>
+      .steam-title {
+        color: var(--primary-color);
+        font-size: 2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+
+      .steam-description {
+        color: #333;
+        line-height: 1.8;
+        font-size: 1.1rem;
+        text-align: left;
+      }
+
+      /* Responsive adjustments for index.html */
+      @media (max-width: 768px) {
+        .hero-title {
+          font-size: 2.5rem;
+        }
+
+        .hero-subtitle {
+          font-size: 1.1rem;
+        }
+
+        .hero-btn {
+          display: block;
+          margin: 0.5rem auto;
+          max-width: 250px;
+        }
+
+        .welcome-title {
+          font-size: 2rem;
+        }
+
+        .welcome-subtitle {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="main-header">
+      <div class="header-container">
+        <div class="logo-container">
+          <img
+            src="assets/praxcis-removebg-preview.png"
+            alt="Praxis Logo Left"
+            class="header-logo logo-left"
+            loading="lazy"
+            width="40"
+            height="40"
+          />
+          <div class="school-title">
+            <h1>Praxis High School</h1>
+            <p class="subtitle">Yogyakarta's Premier STEAM Education</p>
           </div>
-          <div class="col-md-4">
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-users"></i>
-              </div>
-              <h3 class="feature-title">Expert Mentors</h3>
-              <p class="feature-text">Learn from experienced professionals and educators who are passionate about student success.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="feature-card">
-              <div class="feature-icon">
-                <i class="fas fa-lightbulb"></i>
-              </div>
-              <h3 class="feature-title">Innovation Hub</h3>
-              <p class="feature-text">State-of-the-art facilities and resources to foster creativity and hands-on learning.</p>
-            </div>
-          </div>
+          <img
+            src="assets/logopraxis.png"
+            alt="Praxis Logo Right"
+            class="header-logo logo-right"
+            loading="lazy"
+            width="40"
+            height="40"
+          />
         </div>
-      </div>
-    </section>
-
-    <!-- Welcome Section -->
-    <section class="welcome-section">
-      <div class="welcome-overlay"></div>
-      <div class="welcome-content">
-        <h2 class="welcome-title">Discover Excellence</h2>
-        <p class="welcome-subtitle">Where innovation meets education</p>
-      </div>
-    </section>
-
-    <!-- STEAM Section -->
-    <section class="steam-section">
-      <div class="steam-container">
-        <h2 class="steam-title">What is STEAM Education?</h2>
-        <p class="steam-description">
-          STEAM education integrates Science, Technology, Engineering, Arts, and Mathematics into a cohesive learning paradigm. 
-          At Praxis High School, we believe that the arts are just as important as the sciences in developing well-rounded, 
-          creative thinkers who can solve complex problems and innovate for the future.
-        </p>
-        <p class="steam-description">
-          Our curriculum emphasizes hands-on learning, project-based education, and real-world applications. 
-          Students work on interdisciplinary projects that combine multiple STEAM disciplines, preparing them 
-          for the challenges and opportunities of the 21st century.
-        </p>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="main-footer">
-    <div class="footer-container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <img src="praxcis-removebg-preview.png" alt="Praxis High School Logo" class="footer-logo" loading="lazy" width="60" height="60">
-          <h3>Praxis High School</h3>
-          <p>Yogyakarta's Premier STEAM Education</p>
-          <div class="social-icons">
-            <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/smapraxis" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-            <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-          </div>
-        </div>
-        <div class="footer-links">
-          <h4>Quick Links</h4>
-          <ul>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="academy.html">Academics</a></li>
-            <li><a href="admissions.html">Admissions</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Resources</h4>
-          <ul>
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </button>
+        <nav class="main-nav" id="mainNav">
+          <ul class="nav-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="academy.html">Academy</a></li>
             <li><a href="Experiences.html">Experiences</a></li>
-            <li><a href="mentors.html">Our Mentors</a></li>
-            <li><a href="visit.html">Campus Tour</a></li>
+            <li><a href="mentors.html">Mentors</a></li>
+            <li><a href="visit.html">Visit</a></li>
+            <li><a href="admissions.html">Admissions</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
-        </div>
-        <div class="footer-links">
-          <h4>Contact Info</h4>
-          <ul class="contact-info">
-            <li>
-              <i class="fas fa-map-marker-alt"></i>
-              <span>Jl. Pakem-Kalasan, Kalibulus,<br>Area Sawah, Bimomartani, D.I.Y.</span>
-            </li>
-            <li>
-              <i class="fas fa-phone"></i>
-              <span>0811 - 938 - 932</span>
-            </li>
-            <li>
-              <i class="fas fa-envelope"></i>
-              <span>smapraxis@gmail.com</span>
-            </li>
-          </ul>
-        </div>
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com/"
+              target="_blank"
+              aria-label="Facebook"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/smapraxis"
+              target="_blank"
+              aria-label="Instagram"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://twitter.com/" target="_blank" aria-label="Twitter"
+              ><i class="fab fa-twitter"></i
+            ></a>
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              aria-label="YouTube"
+              ><i class="fab fa-youtube"></i
+            ></a>
+          </div>
+        </nav>
       </div>
-      <div class="footer-bottom">
-        <p>&copy; 2025 Praxis High School. All Rights Reserved.</p>
-      </div>
-    </div>
-  </footer>
+    </header>
 
-  <!-- Scripts -->
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <!-- Main Content -->
+    <main id="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="hero-content">
+          <h1 class="hero-title">Welcome to Praxis High School</h1>
+          <p class="hero-subtitle">
+            Empowering students through innovative STEAM education in Yogyakarta
+          </p>
+          <div class="hero-buttons">
+            <a href="admissions.html" class="hero-btn hero-btn-primary"
+              >Apply Now</a
+            >
+            <a href="about.html" class="hero-btn hero-btn-secondary"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="features-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="feature-title">STEAM Education</h3>
+                <p class="feature-text">
+                  Comprehensive Science, Technology, Engineering, Arts, and
+                  Mathematics curriculum designed for the future.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <h3 class="feature-title">Expert Mentors</h3>
+                <p class="feature-text">
+                  Learn from experienced professionals and educators who are
+                  passionate about student success.
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="feature-card">
+                <div class="feature-icon">
+                  <i class="fas fa-lightbulb"></i>
+                </div>
+                <h3 class="feature-title">Innovation Hub</h3>
+                <p class="feature-text">
+                  State-of-the-art facilities and resources to foster creativity
+                  and hands-on learning.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Welcome Section -->
+      <section class="welcome-section">
+        <div class="welcome-overlay"></div>
+        <div class="welcome-content">
+          <h2 class="welcome-title">Discover Excellence</h2>
+          <p class="welcome-subtitle">Where innovation meets education</p>
+        </div>
+      </section>
+
+      <!-- STEAM Section -->
+      <section class="steam-section">
+        <div class="steam-container">
+          <h2 class="steam-title">What is STEAM Education?</h2>
+          <p class="steam-description">
+            STEAM education integrates Science, Technology, Engineering, Arts,
+            and Mathematics into a cohesive learning paradigm. At Praxis High
+            School, we believe that the arts are just as important as the
+            sciences in developing well-rounded, creative thinkers who can solve
+            complex problems and innovate for the future.
+          </p>
+          <p class="steam-description">
+            Our curriculum emphasizes hands-on learning, project-based
+            education, and real-world applications. Students work on
+            interdisciplinary projects that combine multiple STEAM disciplines,
+            preparing them for the challenges and opportunities of the 21st
+            century.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div id="footer"></div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
