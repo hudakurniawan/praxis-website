@@ -270,10 +270,11 @@
       }
 
       .advisor-avatar {
-        width: 120px;
-        height: auto;
-        border-radius: 4px;
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
         object-fit: cover;
+        flex-shrink: 0;
       }
 
       .advisor-info {
@@ -684,93 +685,59 @@
         </div>
       </section>
 
-      <section class="advisor-section">
-        <h2>Our Advisors</h2>
-        <div class="advisor-grid">
-          <div class="advisor-card">
-            <img
-              src="assets/prof purwo.webp"
-              alt="Advisor"
-              class="advisor-avatar"
-            />
-            <div class="advisor-info">
-              <h4 class="advisor-name">Prof. Dr. Purwo Santoso, MA</h4>
-              <ul class="advisor-role">
-                <li>
-                  Professor in the Field of Social Sciences, Universitas Gadjah
-                  Mada (UGM), Yogyakarta
-                </li>
-                <li>
-                  Lecturer at the Faculty of Social and Political Sciences
-                  (FISIPOL), UGM
-                </li>
-                <li>Former Rector of UNU Yogyakarta</li>
-              </ul>
+      <!-- Section Our Advisors -->
+      <section class="py-5 bg-light">
+        <div class="container">
+          <h3 class="text-center mb-4">Our Advisors</h3>
+          <div class="row gy-4">
+            <!-- Advisor 1 -->
+            <div class="col-12 col-md-6 d-flex">
+              <div class="card shadow-sm rounded-4 flex-fill">
+                <div class="card-body d-flex">
+                  <img
+                    src="images/advisors/purwo.png"
+                    alt="Prof. Purwo"
+                    class="advisor-avatar me-3"
+                  />
+                  <div>
+                    <h6 class="fw-bold">Prof. Dr. Purwo Santoso, M.A.</h6>
+                    <p class="small mb-0">
+                      Professor in the field of Political Science, Universitas
+                      Gadjah Mada (UGM), Yogyakarta. Lecturer at the Faculty of
+                      Social and Political Sciences, UGM. Former Rector of UIN
+                      Yogyakarta.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="advisor-card">
-            <img
-              src="assets/prof eko.webp"
-              alt="Advisor"
-              class="advisor-avatar"
-            />
-            <div class="advisor-info">
-              <h4 class="advisor-name">
-                Prof. Dr. Ir. Richardus Eko Indrajit, M.Sc., M.B.A., M.Phil.,
-                M.A.
-              </h4>
-              <ul class="advisor-role">
-                <li>
-                  Professor in the Field of Information Technology and Doctor in
-                  Education
-                </li>
-                <li>
-                  Chairman of the Smart Learning and Character Center, PGRI, and
-                  Rector of Universitas Pradita, Jakarta
-                </li>
-              </ul>
+            <!-- Advisor 2 -->
+            <div class="col-12 col-md-6 d-flex">
+              <div class="card shadow-sm rounded-4 flex-fill">
+                <div class="card-body d-flex">
+                  <img
+                    src="images/advisors/richard.png"
+                    alt="Prof. Richard"
+                    class="advisor-avatar me-3"
+                  />
+                  <div>
+                    <h6 class="fw-bold">
+                      Prof. Dr. Ir. Richard Eko Indrajit, M.Sc., M.B.A.,
+                      M.Phil., M.A.
+                    </h6>
+                    <p class="small mb-0">
+                      Professor in the field of Information Technology and
+                      Education. Chairman of the SEAMOLEC (Southeast Asian
+                      Ministers of Education Organization Regional Open Learning
+                      Centre). Rector of Universitas Pradita, Jakarta.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
 
-          <div class="advisor-card">
-            <img
-              src="assets/prof endang.webp"
-              alt="Advisor"
-              class="advisor-avatar"
-            />
-            <div class="advisor-info">
-              <h4 class="advisor-name">
-                Prof. Dr. Endang Semiarti, M.S., M.Si.
-              </h4>
-              <ul class="advisor-role">
-                <li>
-                  Professor in the Field of Biotechnology, Universitas Gadjah
-                  Mada (UGM), Yogyakarta
-                </li>
-                <li>
-                  Lecturer and Head of the Biotechnology Laboratory, Biology
-                  Department, UGM
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="advisor-card">
-            <img
-              src="assets/kak rairake.webp"
-              alt="Advisor"
-              class="advisor-avatar"
-            />
-            <div class="advisor-info">
-              <h4 class="advisor-name">Rairake Setiawan, Ph.D.</h4>
-              <ul class="advisor-role">
-                <li>
-                  Head of the Doctoral Program in Business and Management,
-                  Universiti Muhammadiyah Malaysi
-                </li>
-              </ul>
-            </div>
+            <!-- dst... -->
           </div>
         </div>
       </section>
