@@ -201,6 +201,104 @@
           height: 250px;
         }
       }
+
+      ul.mentors-list {
+        list-style-type: none;
+        padding: 0;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      ul.mentors-list li {
+        background: #fff;
+        margin-bottom: 15px;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .mentor-name {
+        font-weight: bold;
+        display: inline-block;
+        margin-bottom: 5px;
+        color: #222;
+      }
+
+      .advisor-section {
+        padding: 5rem 0;
+      }
+
+      .advisor-section h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        font-size: 28px;
+      }
+
+      .advisor-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .advisor-card {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 6px;
+        padding: 20px;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      /* Efek hover universal untuk card */
+      .mentor-card,
+      .faculty-card,
+      .advisor-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease,
+          border-color 0.3s ease;
+      }
+
+      .mentor-card:hover,
+      .faculty-card:hover,
+      .advisor-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+        border-color: #ccc;
+      }
+
+      .advisor-avatar {
+        width: 120px;
+        height: auto;
+        border-radius: 4px;
+        object-fit: cover;
+      }
+
+      .advisor-info {
+        flex: 1;
+      }
+
+      .advisor-name {
+        font-weight: bold;
+        font-size: 18px;
+        margin: 0 0 8px;
+      }
+
+      .advisor-role {
+        margin: 0;
+        font-size: 15px;
+        line-height: 1.4;
+      }
+
+      .small-avatar {
+        width: 120px; /* tetap sama dengan avatar lain */
+        height: 120px; /* biar border lingkaran tetap konsisten */
+        object-fit: contain; /* biar gambar muat tanpa memenuhi lingkaran */
+        background-color: #fff; /* opsional: bisa kasih background kalau perlu */
+        border-radius: 050%; /* pastikan tetap bulat */
+      }
     </style>
   </head>
   <body>
@@ -278,13 +376,13 @@
       <!-- Mentors Hero Section -->
       <section class="mentors-hero">
         <div class="container">
-          <h1>Our Mentors</h1>
-          <p>Meet our experienced faculty and industry experts</p>
+          <h1>Our Teachers</h1>
+          <p>Meet our experienced educators and subject specialist</p>
         </div>
       </section>
 
       <!-- Mentors Section -->
-      <section class="mentors-section">
+      <!-- <section class="mentors-section">
         <div class="container">
           <h2 class="text-center mb-5">Expert Mentors</h2>
           <div class="row">
@@ -438,13 +536,67 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
 
-      <!-- Faculty Section -->
+      <!-- Teacher Section -->
       <section class="faculty-section">
         <div class="container">
-          <h2 class="text-center mb-5">Our Faculty</h2>
-          <div class="row">
+          <h2 class="text-center mb-5">Our Teachers</h2>
+          <div class="row justify-content-center">
+            <div class="col-md-4">
+              <div class="faculty-card">
+                <img
+                  src="assets/kak aishah.jpeg"
+                  alt="Faculty Member"
+                  class="faculty-avatar"
+                  loading="lazy"
+                  width="120"
+                  height="120"
+                />
+                <h4 class="faculty-name">
+                  Aishah Rumaysa Prastowo, S.T.,M.Sc., D.Phil.
+                </h4>
+                <p class="faculty-role">Principal</p>
+                <!-- <p>
+                  Specializing in advanced mathematics and statistics for STEAM
+                  applications.
+                </p> -->
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="faculty-card">
+                <img
+                  src="assets/kak asma.jpeg"
+                  alt="Faculty Member"
+                  class="faculty-avatar"
+                  loading="lazy"
+                  width="120"
+                  height="120"
+                />
+                <h4 class="faculty-name">Asma Asiah Prastowo, S.T., M.URP.</h4>
+                <p class="faculty-role">Homeroom Teacher of Grade 10</p>
+                <!-- <p>
+                  Expert in experimental physics and engineering applications.
+                </p> -->
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="faculty-card">
+                <img
+                  src="assets/kak tarii.jpeg"
+                  alt="Faculty Member"
+                  class="faculty-avatar"
+                  loading="lazy"
+                  width="120"
+                  height="120"
+                />
+                <h4 class="faculty-name">Siti Astari Rahmani, S.Si., M.Eng.</h4>
+                <p class="faculty-role">Homeroom Teacher of Grade 11</p>
+                <!-- <p>
+                  Specializing in laboratory research and chemical analysis.
+                </p> -->
+              </div>
+            </div>
             <div class="col-md-4">
               <div class="faculty-card">
                 <img
@@ -455,47 +607,170 @@
                   width="120"
                   height="120"
                 />
-                <h4 class="faculty-name">Syarifah Nurul</h4>
-                <p class="faculty-role">Mathematics Teacher</p>
-                <p>
-                  Specializing in advanced mathematics and statistics for STEAM
-                  applications.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="faculty-card">
-                <img
-                  src="assets/kak della.jpeg"
-                  alt="Faculty Member"
-                  class="faculty-avatar"
-                  loading="lazy"
-                  width="120"
-                  height="120"
-                />
-                <h4 class="faculty-name">Della Safitri</h4>
-                <p class="faculty-role">Physics Teacher</p>
-                <p>
-                  Expert in experimental physics and engineering applications.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-4">
-              <div class="faculty-card">
-                <img
-                  src="assets/kak hendra.jpeg"
-                  alt="Faculty Member"
-                  class="faculty-avatar"
-                  loading="lazy"
-                  width="120"
-                  height="120"
-                />
-                <h4 class="faculty-name">Hendra Pratama</h4>
-                <p class="faculty-role">Chemistry Teacher</p>
-                <p>
+                <h4 class="faculty-name">Syarifah Fitriana, S.Sn., M.Sn.</h4>
+                <p class="faculty-role">Art Teacher</p>
+                <!-- <p>
                   Specializing in laboratory research and chemical analysis.
-                </p>
+                </p> -->
               </div>
+            </div>
+            <div class="col-md-4">
+              <div class="faculty-card">
+                <img
+                  src="assets/kak amin.png"
+                  alt="Faculty Member"
+                  class="faculty-avatar small-avatar"
+                  loading="lazy"
+                  width="120"
+                  height="120"
+                />
+                <h4 class="faculty-name">Dr. Amin Tohari, M.A.</h4>
+                <p class="faculty-role">Social Science Teacher</p>
+                <!-- <p>
+                  Specializing in laboratory research and chemical analysis.
+                </p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mentor Section -->
+      <section class="mentors-section">
+        <div class="container">
+          <h2 class="text-center mb-5">Our Expert Mentors</h2>
+          <div class="row justify-content-center">
+            <ul class="mentors-list">
+              <li>
+                <span class="mentor-name"
+                  >Dr. Mardhani Riasetiawan, S.E., Ak., M.T.</span
+                ><br />
+                Head of Digital Transformation, Universitas Gadjah Mada
+              </li>
+              <li>
+                <span class="mentor-name">Delta Purna Widyangga, B.Eng.</span
+                ><br />
+                CEO & Co-founder of Qiscus
+              </li>
+              <li>
+                <span class="mentor-name"
+                  >Ahmad Rahma Wardhana, S.T., M.Sc.</span
+                ><br />
+                Expert in Energy and Sustainability
+              </li>
+              <li>
+                <span class="mentor-name">Arif Furqan, M.A.</span><br />
+                Artist, Photographer, and Lecturer
+              </li>
+              <li>
+                <span class="mentor-name">Netya Kinanggit, B.Eng.</span><br />
+                Chief Marketing & Science Officer of Neurabot Lab
+              </li>
+              <li>
+                <span class="mentor-name">Galang Wibowo Gustopo, S.Sn.</span
+                ><br />
+                Digital Artist
+              </li>
+              <li>
+                <span class="mentor-name">Budi Raharjo Santoso, B.Eng.</span
+                ><br />
+                Chief of Product and Head of Engineering RUN System
+              </li>
+              <li>
+                <span class="mentor-name">Nofi Bayu Darmawan</span><br />
+                Expert of Digital Marketing
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="advisor-section">
+        <h2>Our Advisors</h2>
+        <div class="advisor-grid">
+          <div class="advisor-card">
+            <img
+              src="assets/prof purwo.png"
+              alt="Advisor"
+              class="advisor-avatar"
+            />
+            <div class="advisor-info">
+              <h4 class="advisor-name">Prof. Dr. Purwo Santoso, MA</h4>
+              <ul class="advisor-role">
+                <li>
+                  Professor in the Field of Social Sciences, Universitas Gadjah
+                  Mada (UGM), Yogyakarta
+                </li>
+                <li>
+                  Lecturer at the Faculty of Social and Political Sciences
+                  (FISIPOL), UGM
+                </li>
+                <li>Former Rector of UNU Yogyakarta</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="advisor-card">
+            <img
+              src="assets/prof eko.png"
+              alt="Advisor"
+              class="advisor-avatar"
+            />
+            <div class="advisor-info">
+              <h4 class="advisor-name">
+                Prof. Dr. Ir. Richardus Eko Indrajit, M.Sc., M.B.A., M.Phil.,
+                M.A.
+              </h4>
+              <ul class="advisor-role">
+                <li>
+                  Professor in the Field of Information Technology and Doctor in
+                  Education
+                </li>
+                <li>
+                  Chairman of the Smart Learning and Character Center, PGRI, and
+                  Rector of Universitas Pradita, Jakarta
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="advisor-card">
+            <img
+              src="assets/prof endang.png"
+              alt="Advisor"
+              class="advisor-avatar"
+            />
+            <div class="advisor-info">
+              <h4 class="advisor-name">
+                Prof. Dr. Endang Semiarti, M.S., M.Si.
+              </h4>
+              <ul class="advisor-role">
+                <li>
+                  Professor in the Field of Biotechnology, Universitas Gadjah
+                  Mada (UGM), Yogyakarta
+                </li>
+                <li>
+                  Lecturer and Head of the Biotechnology Laboratory, Biology
+                  Department, UGM
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="advisor-card">
+            <img
+              src="assets/kak rairake.png"
+              alt="Advisor"
+              class="advisor-avatar"
+            />
+            <div class="advisor-info">
+              <h4 class="advisor-name">Rairake Setiawan, Ph.D.</h4>
+              <ul class="advisor-role">
+                <li>
+                  Head of the Doctoral Program in Business and Management,
+                  Universiti Muhammadiyah Malaysi
+                </li>
+              </ul>
             </div>
           </div>
         </div>
