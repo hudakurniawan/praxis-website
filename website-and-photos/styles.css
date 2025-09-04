@@ -222,6 +222,36 @@ body {
   width: 100%;
 }
 
+/* ===== DROPDOWN STYLES ===== */
+.dropdown-menu {
+  background-color: #f0f4ff; /* latar belakang dropdown */
+  padding: 0.5rem 0;
+  border-radius: 6px;
+  box-shadow: var(--shadow-light);
+  min-width: 180px;
+}
+
+.dropdown-menu .dropdown-item {
+  color: var(--primary-color);
+  padding: 0.6rem 1rem;
+  display: block;
+  text-align: left;
+  transition: var(--transition);
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: var(--secondary-color);
+  color: #fff;
+}
+
+/* Active state khusus untuk dropdown item */
+.dropdown-menu .dropdown-item.active {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-weight: 600;
+}
+
+
 /* ===== SOCIAL ICONS ===== */
 .social-icons {
   display: flex;
