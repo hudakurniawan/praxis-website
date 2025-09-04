@@ -226,6 +226,58 @@
         .timeline-content::before {
           left: -30px !important;
         }
+
+        .nav-menu .dropdown-menu {
+          position: relative;
+          display: block !important;
+          background: #f5f5f5; /* background berbeda */
+          border: none;
+          margin: 0.5rem 0;
+          padding: 0;
+          box-shadow: none;
+          border-radius: 0.5rem;
+        }
+
+        .nav-menu .dropdown > a i {
+          display: none; /* hilangkan caret di mobile */
+        }
+
+        .nav-menu .dropdown-item {
+          text-align: center; /* align tengah */
+          padding: 0.75rem;
+          border-bottom: 1px solid #ddd;
+          color: #1a237e;
+          font-weight: 500;
+          background: #f5f5f5;
+        }
+
+        .nav-menu .dropdown-item:hover {
+          background: #e0e0e0; /* hover warna lebih gelap */
+        }
+
+        .nav-menu .dropdown-item:last-child {
+          border-bottom: none;
+        }
+      }
+
+      /* Dropdown menu spacing */
+      .dropdown-menu {
+        margin-top: 0.5rem; /* beri jarak antara tombol dan menu */
+        border-radius: 0.5rem; /* biar agak rounded */
+        border: 1px solid #ddd; /* supaya tidak nempel */
+      }
+
+      /* Spacing untuk tiap item */
+      .dropdown-menu .dropdown-item {
+        padding: 0.5rem 1rem; /* beri ruang kanan kiri */
+        color: #1a237e;
+        font-weight: 500;
+      }
+
+      /* Hover state */
+      .dropdown-menu .dropdown-item:hover {
+        background-color: #e8eaf6;
+        color: #0d47a1;
       }
     </style>
   </head>
@@ -265,36 +317,50 @@
           <ul class="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html" class="active">About</a></li>
-            <li><a href="academy.html">Academy</a></li>
-            <li><a href="Experiences.html">Experiences</a></li>
-            <li><a href="mentors.html">Mentors</a></li>
-            <li><a href="visit.html">Visit</a></li>
-            <li><a href="admissions.html">Admissions</a></li>
+
+            <!-- Dropdown Academics -->
+            <li class="dropdown">
+              <a z href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                Academics <i class="fas fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="academy.html">Academy</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="Experiences.html"
+                    >Experiences</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="mentors.html">Mentors</a>
+                </li>
+              </ul>
+            </li>
+
+            <!-- Dropdown Admissions -->
+            <li class="dropdown">
+              <a href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                Admissions <i class="fas fa-caret-down"></i>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="visit.html">Visit</a></li>
+                <li>
+                  <a class="dropdown-item" href="admissions.html">Admissions</a>
+                </li>
+              </ul>
+            </li>
+
             <li><a href="contact.html">Contact</a></li>
           </ul>
-          <div class="social-icons">
-            <a
-              href="https://www.facebook.com/"
-              target="_blank"
-              aria-label="Facebook"
-              ><i class="fab fa-facebook-f"></i
-            ></a>
-            <a
-              href="https://www.instagram.com/smapraxis"
-              target="_blank"
-              aria-label="Instagram"
-              ><i class="fab fa-instagram"></i
-            ></a>
-            <a href="https://twitter.com/" target="_blank" aria-label="Twitter"
-              ><i class="fab fa-twitter"></i
-            ></a>
-            <a
-              href="https://www.youtube.com/"
-              target="_blank"
-              aria-label="YouTube"
-              ><i class="fab fa-youtube"></i
-            ></a>
-          </div>
+
+          <!-- Social Icons -->
+          <!-- <div class="social-icons">
+    <a href="https://www.facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.instagram.com/smapraxis" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+    <a href="https://www.youtube.com/" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+  </div> -->
         </nav>
       </div>
     </header>

@@ -28,16 +28,4 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch((err) => console.error("Error loading footer:", err));
   }
-
-  // === Load Navbar ===
-  const navbarContainer = document.getElementById("navbar");
-  if (navbarContainer) {
-    fetch("component/navbar.html")
-      .then((res) => res.text())
-      .then((data) => {
-        navbarContainer.innerHTML = data;
-      })
-      .catch((err) => console.error("Error loading navbar:", err));
-  }
 });
-
