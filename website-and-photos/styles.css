@@ -689,3 +689,43 @@ button:focus {
 .skip-link:focus {
   top: 6px;
 }
+
+/* ===== MOBILE: Dropdown selalu tampil ===== */
+@media (max-width: 768px) {
+  .nav-menu .dropdown-menu {
+    display: block !important; /* paksa selalu muncul */
+    position: relative !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important;
+    background: #ffffff;
+    margin: 0.5rem 0;
+    padding: 0;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    box-shadow: none;
+  }
+
+  .nav-menu .dropdown > a i {
+    display: none; /* sembunyikan ikon panah */
+  }
+
+  .nav-menu .dropdown-item {
+    display: block;
+    text-align: center;
+    padding: 0.75rem;
+    border-bottom: 1px solid #ddd;
+    color: #000;
+    font-weight: 500;
+    background: #ffffff;
+  }
+
+  .nav-menu .dropdown-item:hover {
+    background: #f5f5f5;
+    color: #000;
+  }
+
+  .nav-menu .dropdown-item:last-child {
+    border-bottom: none;
+  }
+}
