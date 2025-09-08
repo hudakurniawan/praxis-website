@@ -266,7 +266,8 @@ header {
 .nav-menu .dropdown-menu {
   display: none;
   position: absolute;
-  top: 92%; /* muncul tepat di bawah menu utama */
+  top: 100%; /* muncul tepat di bawah menu utama */
+  margin-top: 0.4rem;
   left: 0;
   background: #f8f9fa;
   padding: 0.5rem 0;
