@@ -28,4 +28,43 @@ document.addEventListener("DOMContentLoaded", function () {
       })
       .catch((err) => console.error("Error loading footer:", err));
   }
+  // === Load Header ===
+   const headerContainer = document.getElementById("header");
+  if (headerContainer) {
+    fetch("component/header.html")
+      .then((res) => res.text())
+      .then((data) => {
+        headerContainer.innerHTML = data;
+
+        // Setelah header dimuat → baru pasang event listener
+
+        // Mobile menu toggle
+        const mobileMenuBtn = headerContainer.querySelector("#mobileMenuBtn");
+        const mainNav = headerContainer.querySelector("#mainNav");
+
+        if (mobileMenuBtn && mainNav) {
+          mobileMenuBtn.addEventListener("click", function () {
+            mainNav.classList.toggle("active");
+          });
+        }
+
+        // Tutup menu saat klik link
+        headerContainer.querySelectorAll(".nav-menu a").forEach((link) => {
+          link.addEventListener("click", function () {
+            mainNav.classList.remove("active");
+          });
+        });
+
+        // Highlight active menu
+        const currentPage = window.location.pathname.split("/").pop() || "index.html";
+        const navLinks = headerContainer.querySelectorAll(".nav-menu a");
+
+        navLinks.forEach((link) => {
+          if (link.getAttribute("href") === currentPage) {
+            link.classList.add("active");
+          }
+        });
+      })
+      .catch((err) => console.error("Error loading header:", err));
+  }
 });
