@@ -239,7 +239,7 @@ header {
 
 .dropdown-menu .dropdown-item {
   color: var(--primary-color);
-  padding: 0.6rem 1rem;
+  padding: 0.5rem 1rem;
   display: block;
   text-align: left;
   transition: var(--transition);
@@ -276,7 +276,7 @@ header {
 
   opacity: 0;
   visibility: hidden;
-  transform: translateY(10px);
+  /* transform: translateY(10px); */
   transition: all 0.3s ease;
   z-index: 99;
 }
