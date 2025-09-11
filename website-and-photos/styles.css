@@ -736,3 +736,96 @@ button:focus {
     border-bottom: none;
   }
 }
+
+/* ROADMAP SECTION */
+.roadmap-section {
+  background: #f9f9f9;
+  padding: 5rem 0;
+}
+
+.timeline-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Garis di atas step */
+.timeline-grid::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: #ddd;
+  z-index: 1;
+}
+
+/* Step number */
+.timeline-step {
+  width: 45px;
+  height: 45px;
+  background: #fff;
+  border: 3px solid var(--accent-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 0 auto 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Card content */
+.timeline-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-light);
+  text-align: left;
+  min-height: 200px;
+}
+
+.timeline-content h4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.timeline-content ul {
+  padding-left: 1.2rem;
+  margin: 0;
+}
+
+.timeline-content li {
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-dark);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .timeline-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .timeline-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-grid::before {
+    display: none; /* sembunyikan garis */
+  }
+
+  .timeline-step {
+    margin-left: 0;
+  }
+}
