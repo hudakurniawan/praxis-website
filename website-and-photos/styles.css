@@ -247,7 +247,7 @@ header {
 
 .dropdown-menu .dropdown-item:hover {
   background-color: var(--secondary-color);
-  color: #ffc107;
+  color: #0d47a1;
 }
 
 /* Active state khusus untuk dropdown item */
