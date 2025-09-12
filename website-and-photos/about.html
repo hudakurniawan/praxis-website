@@ -26,10 +26,7 @@
       property="og:image"
       content="https://praxis.sch.id/assets/praxcis-removebg-preview.webp"
     />
-    <meta
-      property="og:url"
-      content="https://praxis.sch.id/about.html"
-    />
+    <meta property="og:url" content="https://praxis.sch.id/about.html" />
     <meta property="og:type" content="website" />
 
     <!-- Twitter Card Meta Tags -->
@@ -217,6 +214,52 @@
         left: -60px;
       }
 
+      /* === Future of Jobs Cards === */
+      .future-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .future-card {
+        background: #ffffff;
+        border-radius: 12px;
+        padding: 2rem;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease;
+      }
+
+      .future-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .future-card h4 {
+        margin-bottom: 1rem;
+      }
+
+      .future-card ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .future-card ul li {
+        margin-bottom: 0.6rem;
+        padding-left: 1.5rem;
+        position: relative;
+        color: #444;
+        font-weight: 500;
+      }
+
+      .future-card ul li::before {
+        content: "▹";
+        color: var(--accent-color);
+        position: absolute;
+        left: 0;
+        font-size: 1rem;
+      }
+
       /* Responsive adjustments for about.html */
       @media (max-width: 768px) {
         .about-hero h1 {
@@ -258,6 +301,84 @@
             Discover our mission, vision, and commitment to excellence in STEAM
             education
           </p>
+        </div>
+      </section>
+
+      <!-- Who We Are Section -->
+      <section class="who-section py-5">
+        <div class="container">
+          <h2 class="text-center mb-4">Who We Are</h2>
+          <p class="text-center mb-5 w-75 mx-auto">
+            Praxis High School is a pioneering institution in Yogyakarta
+            committed to preparing students for the rapidly changing world of
+            work. We focus on building 21st-century skills through a unique
+            STEAM-based curriculum that integrates Science, Technology,
+            Engineering, Arts, and Mathematics.
+          </p>
+          <div class="row align-items-center">
+            <div class="col-md-6">
+              <img
+                src="assets/praxcis-removebg-preview.webp"
+                alt="Praxis Campus"
+                class="img-fluid rounded"
+                loading="lazy"
+              />
+            </div>
+            <div class="col-md-6">
+              <h4>Our Approach</h4>
+              <p>
+                We emphasize project-based learning, collaboration with industry
+                mentors, and hands-on experiences. Students not only master
+                academic knowledge but also develop critical thinking,
+                creativity, and entrepreneurial skills essential for their
+                future careers.
+              </p>
+              <ul>
+                <li>STEAM-integrated core curriculum</li>
+                <li>Real-world projects guided by mentors</li>
+                <li>Partnerships with universities and industries</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Future of Jobs Section -->
+      <section class="future-section py-5 bg-light">
+        <div class="container">
+          <h2 class="text-center mb-4">The Future of Jobs</h2>
+          <p class="text-center mb-5 w-75 mx-auto">
+            Based on the World Economic Forum’s <em>Future of Jobs Report</em>,
+            65% of students today will work in jobs that do not yet exist. At
+            Praxis, we prepare our students to thrive in this uncertain future.
+          </p>
+          <div class="future-cards">
+            <!-- Top Emerging Jobs -->
+            <div class="future-card">
+              <h4>Top Emerging Jobs</h4>
+              <ul>
+                <li>AI & Machine Learning Specialists</li>
+                <li>Data Analysts & Scientists</li>
+                <li>Robotics Engineers</li>
+                <li>FinTech Experts</li>
+                <li>Sustainability & Green Jobs</li>
+                <li>Cybersecurity Specialists</li>
+              </ul>
+            </div>
+
+            <!-- Our Response -->
+            <div class="future-card">
+              <h4>Our Response</h4>
+              <ul>
+                <li>STEAM Curriculum with AI & Robotics</li>
+                <li>Real-World Research Projects</li>
+                <li>Business & Entrepreneurship Training</li>
+                <li>University & Industry Partnerships</li>
+                <li>Global Competitions & Collaborations</li>
+                <li>Focus on Lifelong Learning Skills</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 

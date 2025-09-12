@@ -794,7 +794,7 @@ button:focus {
 .timeline-content h4 {
   font-size: 1.1rem;
   font-weight: 600;
-  color: var(--secondary-color);
+  color: var(--primary-color);
   margin-bottom: 1rem;
 }
 
@@ -827,5 +827,80 @@ button:focus {
 
   .timeline-step {
     margin-left: 0;
+  }
+}
+
+/* === Who We Are Section === */
+.who-section {
+  background: #ffffff;
+}
+
+.who-section .lead {
+  max-width: 800px;
+  margin: 0 auto;
+  color: #555;
+}
+.who-section h4 {
+  margin-bottom: 1rem;
+}
+.who-section ul {
+  padding-left: 0;
+  list-style: none;
+}
+.who-section ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+  font-weight: 500;
+  color: #333;
+}
+.who-section ul li::before {
+  content: "✔";
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+}
+
+/* === The Future of Jobs Section === */
+.future-section {
+  background: #f8f9fa;
+}
+
+.future-section .lead {
+  max-width: 850px;
+  margin: 0 auto;
+  color: #444;
+}
+.future-section h4 {
+  margin-bottom: 1rem;
+}
+.future-section ul {
+  list-style: none;
+  padding: 0;
+}
+.future-section ul li {
+  margin-bottom: 0.6rem;
+  padding-left: 1.5rem;
+  position: relative;
+  color: #333;
+  font-weight: 500;
+}
+.future-section ul li::before {
+  content: "▸";
+  color: var(--accent-color);
+  position: absolute;
+  left: 0;
+  font-size: 1rem;
+}
+
+/* === General Responsive === */
+@media (max-width: 768px) {
+  .who-section h2,
+  .future-section h2 {
+    font-size: 2rem;
+  }
+  .who-section .lead,
+  .future-section .lead {
+    font-size: 1rem;
   }
 }
