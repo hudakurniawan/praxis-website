@@ -609,6 +609,10 @@ header {
     width: 100%;
   }
 
+  .logo-container {
+    justify-content: space-between;
+  }
+
   .nav-menu {
     flex-direction: column;
     width: 100%;
