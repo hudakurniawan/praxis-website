@@ -809,6 +809,18 @@ button:focus {
   color: var(--text-dark);
 }
 
+@media (max-width: 1024px) {
+  .timeline-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .timeline-grid::before {
+    display: none; /* hide line di tablet & mobile */
+  }
+}
+
 /* Responsive */
 @media (max-width: 992px) {
   .timeline-grid {
