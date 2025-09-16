@@ -813,7 +813,7 @@ button:focus {
   color: var(--text-dark);
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
   .timeline-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
