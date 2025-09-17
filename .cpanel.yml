@@ -1,7 +1,4 @@
 deployment:
   tasks:
-    # Tentukan path tujuan
     - export DEPLOYPATH=/home/praj1261/public_html/
-
-    # Sinkronisasi semua file ke public_html, tapi biarkan biaya.html tetap ada
-    - /bin/rsync -av --delete --exclude "biaya.html" --exclude "future-jobs.html" ./ $DEPLOYPATH
+    - /bin/cp -R $(ls | grep -v '^biaya.html$') $DEPLOYPATH
